@@ -8,6 +8,8 @@ subscription-manager register --username jvillarroelquintec --auto-attach
 
 cd $HOME/crio30
 
+sudoers + wheel
+
 sh script.sh 
 
 On master:
