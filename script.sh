@@ -47,3 +47,4 @@ EOF
 sudo dnf install kubelet kubeadm kubectl -y
 sudo systemctl enable kubelet
 sudo systemctl start kubelet
+sudo dnf install -y socat
