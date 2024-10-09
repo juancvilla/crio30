@@ -1,8 +1,8 @@
 sudo swapoff -a
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 sudo sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
-sudo sed -i '$ a 192.168.100.17 master-node-k8.virtualbox.org' /etc/hosts
-sudo sed -i '$ a 192.168.100.12 worker-node-1-k8.virtualbox.org' /etc/hosts
+sudo sed -i '$ a 192.168.100.17 master-node-k8.virtualbox.org master-node-k8' /etc/hosts
+sudo sed -i '$ a 192.168.100.12 worker-node-1-k8.virtualbox.org worker-node-1-k8' /etc/hosts
 sudo dnf install -y iproute-tc
 sudo firewall-cmd --permanent --add-port=6443/tcp
 sudo firewall-cmd --permanent --add-port=2379-2380/tcp
